@@ -41,7 +41,7 @@ public class AppleToastView : UIView, ToastView {
             widthAnchor.constraint(greaterThanOrEqualToConstant: config.minWidth),
             leadingAnchor.constraint(greaterThanOrEqualTo: superview.leadingAnchor, constant: 10),
             trailingAnchor.constraint(lessThanOrEqualTo: superview.trailingAnchor, constant: -10),
-            centerXAnchor.constraint(equalTo: superview.centerXAnchor)
+            centerXAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.centerXAnchor)
         ])
         
         switch toast.config.direction {
