@@ -16,6 +16,7 @@ public struct ToastConfiguration {
     public let exitingAnimation: Toast.AnimationType
     public let background: Toast.Background
     public let allowToastOverlap: Bool
+    public let extraVerticalInset: CGFloat
 
     public let view: UIView?
 
@@ -36,7 +37,8 @@ public struct ToastConfiguration {
         exitingAnimation: Toast.AnimationType = .default,
         attachTo view: UIView? = nil,
         background: Toast.Background = .none,
-        allowToastOverlap: Bool = true
+        allowToastOverlap: Bool = true,
+        extraVerticalInset: CGFloat = 0
     ) {
         self.direction = direction
         self.dismissables = dismissBy
@@ -46,6 +48,7 @@ public struct ToastConfiguration {
         self.view = view
         self.background = background
         self.allowToastOverlap = allowToastOverlap
+        self.extraVerticalInset = extraVerticalInset
     }
 }
 
